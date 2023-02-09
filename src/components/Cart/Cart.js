@@ -1,8 +1,10 @@
 import React from "react";
+import Modal from "../UI/Modal";
+import classes from "./Cart.module.css";
 
 const Cart = (props) => {
   const CartItems = (
-    <ul className={classes["cart-item"]}>
+    <ul className={classes["cart-items"]}>
       {[
         {
           id: "c1",
@@ -16,17 +18,19 @@ const Cart = (props) => {
     </ul>
   );
   return (
-    <div>
+    <Modal onClose={props.onClose}>
       {CartItems}
       <div className={classes.total}>
         <span> Total Amount</span>
         <span>35.60</span>
       </div>
-      <div className={classes.action}>
-        <buttton className={classes["button--alt"]}>Close</buttton>
-        <buttton className={classes.button}>Order</buttton>
+      <div className={classes.actions}>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
+          Close
+        </button>
+        <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 };
 
