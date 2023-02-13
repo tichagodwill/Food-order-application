@@ -7,12 +7,16 @@ const Footer = () => {
     <div className={classes.footer}>
       <main className={classes.footer__content}>
         <section className={classes.footer__section}>
-          <h2>Reach Us</h2>
+          <h2>Connect with Us</h2>
           <section className={classes["icons-section"]}>
             <a href="/" className={classes.facebook}>
               <FaFacebook className={classes.icon} />
             </a>
-            <a href="/" className={classes.youtube}>
+            <a
+              href="https://www.youtube.com/channel/UCPiw-Cn5tJLr3jODjIJqvKg"
+              target="blank"
+              className={classes.youtube}
+            >
               <FaYoutube className={classes.icon} />
             </a>
             <a href="/" className={classes.instagram}>
@@ -46,7 +50,11 @@ const Footer = () => {
               <strong>
                 <p>Signup for our newsletter</p>
               </strong>
-              <input type="email" label="Email address" />
+              <input
+                type="email"
+                label="Email address"
+                placeholder="email address"
+              />
               <button className={classes.btn}>
                 <strong>Subscribe</strong>
               </button>
